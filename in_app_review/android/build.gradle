@@ -25,7 +25,7 @@ apply plugin: "com.android.library"
 
 def agpMajor = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')[0] as int
 if (agpMajor < 9) {
-    apply plugin: "kotlin-android"
+    pluginManager.apply("kotlin-android")
 }
 
 android {
